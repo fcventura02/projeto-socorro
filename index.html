@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-projetosocorro.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Socorro</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header class="container mx-auto flex justify-center py-5">
+      <img src="/logo-projeto-socorro.svg" alt="" />
+    </header>
+    <main>
+      <section class="container mx-auto pb-5">
+        <h1 class="font-bold text-2xl pb-2">
+          <span class="uppercase">Servir</span>: Nossa essência, nossa missão
+        </h1>
+        <p>
+          Acreditamos que "<b>há maior felicidade em dar do que receber</b>", e
+          por isso, dedicamos nosso <b>tempo</b> e <b>esforço</b> para levar
+          alimento e esperança a famílias carentes e em situação de
+          vulnerabilidade.
+        </p>
+      </section>
+      <section x-data="{opt:1}" class="container mx-auto">
+        <div class="menu-container mb-5">
+          <button
+            :class="opt === 1 && 'selected'"
+            @click="opt = 1"
+            class="btn-menu"
+          >
+            Doe
+          </button>
+          <button
+            :class="opt === 2 && 'selected'"
+            @click="opt = 2"
+            class="btn-menu"
+          >
+            Redes Sociais
+          </button>
+        </div>
+        <div class="relative min-h-[351px]">
+          <div
+            x-show="opt === 1"
+            x-cloak
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="absolute top-0 left-0 -z-1 opacity-0"
+            x-transition:enter-end="absolute top-0 left-0 z-1 opacity-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="absolute top-0 left-0 -z-1 opacity-0"
+            x-transition:leave-end="absolute top-0 left-0 -z-1 opacity-0"
+            class="space-y-4 w-full bg-white"
+          >
+            <h2 class="font-bold text-xl">
+              Junte-se a nós nessa jornada de solidariedade!
+            </h2>
+            <button class="btn-primary btn-center w-full">
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.0892 22.6881C22.5659 22.6893 22.0475 22.5868 21.564 22.3866C21.0805 22.1864 20.6414 21.8925 20.2721 21.5218L16.2033 17.453C16.0593 17.3162 15.8682 17.2399 15.6695 17.2399C15.4709 17.2399 15.2798 17.3162 15.1358 17.453L11.0515 21.5373C10.6823 21.9082 10.2432 22.2022 9.75969 22.4024C9.27615 22.6026 8.75772 22.705 8.23438 22.7036H7.43225L12.586 27.8574C14.1941 29.4655 16.8039 29.4655 18.4121 27.8574L23.5794 22.6881H23.0892ZM8.23438 8.29638C9.3 8.29638 10.2998 8.71101 11.0515 9.46276L15.1358 13.547C15.2059 13.6173 15.2893 13.6731 15.381 13.7111C15.4728 13.7492 15.5712 13.7688 15.6705 13.7688C15.7698 13.7688 15.8682 13.7492 15.96 13.7111C16.0517 13.6731 16.1351 13.6173 16.2053 13.547L20.274 9.47826C20.643 9.10758 21.0817 8.81365 21.5649 8.61346C22.0481 8.41327 22.5662 8.31077 23.0892 8.31188H23.5794L18.4121 3.14457C17.6393 2.37233 16.5915 1.93854 15.499 1.93854C14.4065 1.93854 13.3588 2.37233 12.586 3.14457L7.43225 8.29832L8.23438 8.29638Z"
+                  fill="white"
+                />
+                <path
+                  d="M27.8554 12.586L24.7322 9.46275C24.6621 9.49154 24.5871 9.50667 24.5113 9.50731H23.0911C22.3568 9.50731 21.638 9.80569 21.1207 10.3249L17.0519 14.3937C16.871 14.5756 16.6559 14.7199 16.419 14.8184C16.1821 14.9169 15.928 14.9676 15.6715 14.9676C15.4149 14.9676 15.1609 14.9169 14.924 14.8184C14.6871 14.7199 14.472 14.5756 14.291 14.3937L10.2068 10.3075C9.68276 9.78565 8.97391 9.49181 8.23438 9.48988H6.49063C6.41834 9.4893 6.34677 9.47551 6.27945 9.44919L3.14457 12.586C1.53645 14.1941 1.53645 16.8039 3.14457 18.414L6.27945 21.5489C6.34603 21.5221 6.41694 21.5076 6.4887 21.5063H8.23438C8.97063 21.5063 9.68751 21.2098 10.2068 20.6906L14.2891 16.6044C14.6616 16.2497 15.1562 16.0519 15.6705 16.0519C16.1848 16.0519 16.6795 16.2497 17.0519 16.6044L21.1207 20.6731C21.638 21.1924 22.3568 21.4888 23.0911 21.4888H24.5113C24.5888 21.4888 24.6644 21.5082 24.7322 21.5353L27.8554 18.4121C29.4636 16.8039 29.4636 14.1941 27.8554 12.586Z"
+                  fill="white"
+                />
+              </svg>
+              <span class="pb-0.5"> Faça uma doação </span>
+            </button>
+            <p>
+              Para fazer
+              <b
+                >doação de alimentos, produtos de higiene pessoal ou de
+                roupas</b
+              >
+              entre em contado através do <b>direct</b> do nosso instagram
+              <a
+                class="link"
+                href="https://www.instagram.com/projeto.socorro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@projeto.socorro</a
+              >
+            </p>
+            <p>
+              Nosso <b>posto de arrecadação</b> se encontra na
+              <b>Igreja Vida Nova</b> <br />
+              Av. Gastão Demetrio Maia, 1855, Floramar - Belo horizonte, MG
+            </p>
+          </div>
+          <div
+            x-show="opt === 2"
+            x-cloak
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="absolute top-0 left-0 -z-1 opacity-0"
+            x-transition:enter-end="absolute top-0 left-0 z-1 opacity-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="absolute top-0 left-0 -z-1 opacity-0"
+            x-transition:leave-end="absolute top-0 left-0 -z-1 opacity-0"
+            class="space-y-4 w-full bg-white"
+          >
+            <h2 class="font-bold text-xl">Conheça nosso trabalho!</h2>
+            <a
+              class="btn-secondary btn-between w-full"
+              href="https://www.instagram.com/projeto.socorro/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="flex items-center gap-1">
+                <instagram></instagram>
+                <span class="pb-0.5 uppercase font-bold">
+                  @projeto.socorro
+                </span>
+              </div>
+              <share></share>
+            </a>
+            <a
+              class="btn-secondary btn-between w-full"
+              href="https://www.instagram.com/igrejavidanovabh/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="flex items-center gap-1">
+                <instagram></instagram>
+                <span class="pb-0.5 uppercase font-bold">
+                  @igrejavidanovabh
+                </span>
+              </div>
+              <share></share>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container p-0 mt-5">
+      <p class="px-[1.5rem] pb-2">
+        <b>Nossa localização</b>
+        <br />
+        Av. Gastão Demétrio Maia, 1855, Floramar - Belo Horizonte, MG
+      </p>
+      <a href="https://g.co/kgs/uTm5bVX" target="_blank" rel="noopener noreferrer">
+        <img
+          width="777"
+          height="306"
+          src="/public/maps.png"
+          alt="Imagem do google maps mostrando o endereço Av. Gastão Demetrio Maia, 1855, Floramar - Belo  horizonte, MG"
+        />
+      </a>
+    </footer>
+  </body>
+  <script src="./src/main.js"></script>
+  <script type="module" src="./src/alpine.js"></script>
+</html>

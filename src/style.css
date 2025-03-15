@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+[x-cloak] { display: none !important; }
+
+.menu-container {
+  @apply w-fit bg-gray-500 p-0.5 border border-gray-800 rounded-full;
+}
+
+.btn-menu {
+  @apply p-2.5 text-white font-semibold rounded-full hover:bg-gray-600 transition-colors cursor-pointer;
+  &.selected {
+    @apply bg-gray-800 hover:bg-gray-800;
+  }
+}
+
+.btn-center {
+  @apply justify-center items-center;
+}
+.btn-between {
+  @apply justify-between items-center;
+}
+.btn-primary {
+  @apply bg-red-500 flex gap-2 text-white leading-3 font-semibold py-3 px-5 rounded-2xl hover:cursor-pointer hover:bg-red-600 transition-colors;
+}
+.btn-secondary {
+  @apply bg-white flex gap-2 text-red-500 border-2 border-transparent leading-3 font-semibold py-3 px-5 rounded-2xl hover:cursor-pointer hover:border-red-600 hover:text-red-600 transition-colors;
+}
+
+.link {
+  @apply text-red-500 font-bold underline;
+}

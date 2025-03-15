@@ -1,0 +1,18 @@
+{
+  "name": "projeto-socorro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.14",
+    "alpinejs": "^3.14.9",
+    "tailwindcss": "^4.0.14",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {}
+}
