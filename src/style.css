@@ -5,6 +5,11 @@
   padding-inline: 1.5rem;
 }
 
+html{
+  --default-font-family: "Roboto", sans-serif;
+  font-stretch: condensed;
+}
+
 [x-cloak] { display: none !important; }
 
 .menu-container {
